@@ -157,9 +157,8 @@ client.on('interactionCreate', async (interaction: any) => {
     if (interaction.isSelectMenu()) {
 
         const menu =
-            client.menuHandler.get(interaction.customId + "%%" + interaction.values[0]); // Gets menu
+            client.menuHandler.get(interaction.customId + "%%" + interaction.values[0]);
 
-        // Return if no menus
         if (menu) {
 
             try {
@@ -167,7 +166,6 @@ client.on('interactionCreate', async (interaction: any) => {
             } catch (error) {
                 console.log(error);
 
-                // Log error in Logs channel
                 logError(
                     client,
                     error,
