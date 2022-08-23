@@ -1,5 +1,5 @@
-const { EmbedBuilder } = require('discord.js');
-const { BOT_NAME, PREFIX } = require('../../config/config.json');
+import { EmbedBuilder } from 'discord.js';
+import { BOT_NAME, PREFIX } from '../../config/config.json';
 
 module.exports = {
     name: "help",
@@ -11,11 +11,11 @@ module.exports = {
             .setTitle(`${BOT_NAME}'s Legacy Commands`) // Bot name
             .setColor('#000') // Hex code [three characters can be used if sets of two exist; #bbaaee could be #bae]
 
-        legacyCommands.forEach(cmd => {
-            helpEmbed.addField(
-                `**${PREFIX}${cmd.name} ${cmd.aliases ? `(${cmd.aliases})` : ''}**`,
-                `${cmd.description}`
-            )
+        legacyCommands.forEach((cmd: any) => {
+            helpEmbed.addFields({
+                name: `**${PREFIX}${cmd.name} ${cmd.aliases ? `(${cmd.aliases})` : ''}**`,
+                value: `${cmd.description}`
+            })
         });
         message.channel.send({
             embeds: [helpEmbed]

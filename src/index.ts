@@ -17,7 +17,7 @@ import {
 } from './config/config.json';
 
 // Import Module Exports
-import { ready } from './module_exports/ready';
+import logready from 'logready';
 import { logError } from './module_exports/error';
 
 const client: any = new Client({
@@ -210,7 +210,7 @@ client.on('messageCreate', (message: any) => {
 
 // Ready Event
 client.on('ready', async () => {
-    ready(BOT_NAME);
+    logready(BOT_NAME);
 
     // Set bot presence in ./config/config.json
     client.user.setPresence({
