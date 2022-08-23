@@ -1,7 +1,7 @@
 import { EmbedBuilder } from 'discord.js';
 import { BOT_NAME, PREFIX } from '../../config/config.json';
 
-module.exports = {
+export = {
     name: "help",
     description: "Help command",
     execute(client, message, args) {

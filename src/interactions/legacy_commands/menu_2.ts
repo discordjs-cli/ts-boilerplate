@@ -1,6 +1,6 @@
 import { ActionRowBuilder, SelectMenuBuilder } from 'discord.js';
 
-module.exports = {
+export = {
 	name: "menu2",
 	description: "Menu command",
 	execute(client, message, args) {

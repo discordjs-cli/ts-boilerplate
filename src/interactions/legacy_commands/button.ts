@@ -1,6 +1,6 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
 
-module.exports = {
+export = {
     name: "button",
     description: "Get a button",
     execute(client, message, args) {
