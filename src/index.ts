@@ -194,7 +194,7 @@ client.on('messageCreate', (message: any) => {
     if (!command) return; // Return if no command is found
 
     try {
-        command.execute(client, message, args);
+        command.execute(message, args);
     } catch (error) {
         console.log(error);
 

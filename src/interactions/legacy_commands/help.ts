@@ -4,7 +4,7 @@ import { BOT_NAME, PREFIX } from '../../config/config.json';
 export = {
     name: "help",
     description: "Help command",
-    execute(client, message, args) {
+    execute(message, args) {
         let legacyCommands = client.legacyCommands; // Fetches Legacy commands
 
         const helpEmbed = new EmbedBuilder()
