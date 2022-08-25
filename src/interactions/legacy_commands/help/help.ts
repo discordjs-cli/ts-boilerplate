@@ -4,8 +4,8 @@ import { BOT_NAME, PREFIX } from '../../../config/config.json';
 export = {
     name: "help",
     description: "Help command",
-    execute(message, args) {
-        let legacyCommands = client.legacyCommands; // Fetches Legacy commands
+    execute(message: any, args: any) {
+        let legacyCommands = message.client.legacyCommands; // Fetches Legacy commands
 
         const helpEmbed = new EmbedBuilder()
             .setTitle(`${BOT_NAME}'s Legacy Commands`) // Bot name

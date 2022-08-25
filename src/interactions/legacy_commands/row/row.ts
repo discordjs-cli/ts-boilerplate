@@ -3,7 +3,7 @@ import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
 export = {
     name: "row",
     description: "Row of buttons",
-    execute(message, args) {
+    execute(message: any, args: any) {
         const rowDemo = new ActionRowBuilder()
             .addComponents(
                 new ButtonBuilder()

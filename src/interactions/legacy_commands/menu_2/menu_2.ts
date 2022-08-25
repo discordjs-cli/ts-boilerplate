@@ -3,7 +3,7 @@ import { ActionRowBuilder, SelectMenuBuilder } from 'discord.js';
 export = {
 	name: "menu2",
 	description: "Menu command",
-	execute(message, args) {
+	execute(message: any, args: any) {
 		// Menu 2
 		const menu = new ActionRowBuilder()
 			.addComponents(
