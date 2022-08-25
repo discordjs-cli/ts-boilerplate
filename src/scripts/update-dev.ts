@@ -1,4 +1,4 @@
 // Runs delete-dev, then deploy-dev
 
-import './delete-dev.js';
-import './deploy-dev.js';
+require('./delete-dev.js');
+require('./deploy-dev.js');

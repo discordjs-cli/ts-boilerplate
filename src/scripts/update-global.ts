@@ -1,4 +1,4 @@
 // Runs delete-global, then deploy-global
 
-import './delete-global';
-import './deploy-global';
+require('./delete-global');
+require('./deploy-global');

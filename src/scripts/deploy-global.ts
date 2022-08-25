@@ -13,7 +13,7 @@ async function deployGlobal() {
 
     const commands = [];
 
-    var currentDir = __dirname.split('/');
+    var currentDir: any = __dirname.split('/');
     currentDir.pop();
     currentDir = currentDir.join('/');
 
