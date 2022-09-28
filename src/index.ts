@@ -14,7 +14,7 @@ import {
     ACTIVITY,
     TYPE,
     STATUS
-} from './config/config.json';
+} from './config/config.ts';
 
 // Import Module Exports
 import logready from 'logready';
@@ -211,7 +211,7 @@ client.on('messageCreate', (message: any) => {
 client.on('ready', async () => {
     logready(BOT_NAME);
 
-    // Set bot presence in ./config/config.json
+    // Set bot presence in ./config/config.ts
     client.user.setPresence({
         activities: [
             {
@@ -222,5 +222,5 @@ client.on('ready', async () => {
         ], status: `${STATUS}` // Playing, Watching, Listening, Competing, Streaming
     });
 });
-// Set token in ./config/config.json
+// Set token in ./config/config.ts
 client.login(TOKEN);

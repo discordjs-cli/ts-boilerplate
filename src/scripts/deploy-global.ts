@@ -3,12 +3,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord.js';
-import { CLIENT_ID, DEV_GUILD_ID, TOKEN } from '../config/config.json';
+import { CLIENT_ID, DEV_GUILD_ID, TOKEN } from '../config/config.ts';
 
 async function deployGlobal() {
     if (CLIENT_ID === '') {
-        console.log('ERROR: Client ID unavailable. Please provide a valid client ID in ./config/config.json');
-        process.exit();
+        console.log('ERROR: Client ID unavailable. Please provide a valid client ID in ./config/config.ts');
+        process.exit(2);
     }
 
     const commands = [];
